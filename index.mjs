@@ -22,8 +22,8 @@ const __dirname = dirname(__filename);
 
 app.use(compression());
 app.use(express.static(__dirname + "/static/"));
-app.use("/class/", express.static(__dirname + "/services/uv/"));
-app.use("/work/", express.static(__dirname + "/services/dynamic/"));
+app.use("/class/", express.static(__dirname + "/static/uv/"));
+app.use("/work/", express.static(__dirname + "/static/dynamic/"));
 
 app.use((req, res) => {
   res.status(404);
